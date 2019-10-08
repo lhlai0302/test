@@ -3,6 +3,9 @@ var htmlWebpackPlugin=require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports={
     entry:path.join(__dirname,'./src/main.js'),   //入口文件
+    node:{
+        fs:'empty'
+    },
     output:{  //指定输出选项
         path:path.join(__dirname,'./dist'),  //输出路径
         filename:'bundle.js'  //指定输出文件的名称
